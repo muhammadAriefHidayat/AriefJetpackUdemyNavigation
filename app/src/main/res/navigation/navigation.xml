@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/navigation" app:startDestination="@id/listFragment">
+            android:id="@+id/navigation"
+            app:startDestination="@id/listFragment">
 
-    <fragment android:id="@+id/listFragment" android:name="org.dicoding.jetpackudemy.view.ListFragment"
-              android:label="ListFragment">
-        <action android:id="@+id/action_listFragment_to_detilFragment" app:destination="@id/detilFragment"/>
+    <fragment
+            android:id="@+id/listFragment"
+            android:name="org.dicoding.jetpackudemy.view.ListFragment"
+            android:label="ActionListFragment">
+        <action
+                android:id="@+id/action_listFragment_to_detilFragment"
+                app:destination="@id/detilFragment"/>
     </fragment>
-    <fragment android:id="@+id/detilFragment" android:name="org.dicoding.jetpackudemy.view.DetilFragment"
-              android:label="DetilFragment"/>
+    <fragment
+            android:id="@+id/detilFragment"
+            android:name="org.dicoding.jetpackudemy.view.DetilFragment"
+            android:label="ActionDetilFragment">
+        <action
+                android:id="@+id/action_detilFragment_to_listFragment"
+                app:destination="@id/listFragment"/>
+    </fragment>
 </navigation>
