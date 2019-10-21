@@ -6,8 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_detil.*
+
 
 import org.dicoding.jetpackudemy.R
 
