@@ -6,4 +6,6 @@
     <string name="listfragment">ListFragment</string>
     <string name="detil_fragmnet">Detil Fragmnet</string>
     <string name="error_string">error ketika loading</string>
+    <string name="catname">catName</string>
+    <string name="lifespan">LifeSpan</string>
 </resources>
