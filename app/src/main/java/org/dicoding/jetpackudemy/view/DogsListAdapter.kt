@@ -3,6 +3,7 @@ package org.dicoding.jetpackudemy.view
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_dog.view.*
 import org.dicoding.jetpackudemy.R
@@ -25,8 +26,11 @@ class DogsListAdapter(val dogList: ArrayList<DogBreed>):RecyclerView.Adapter<Dog
 
 
     override fun onBindViewHolder(holder: dogViewHoler, position: Int) {
-        holder.view.name.text = dogList[position].lifeSpan
+        holder.view.name.text = dogList[position].dogBreed
         holder.view.lifeSpan.text = dogList[position].lifeSpan
+        holder.view.setOnClickListener {
+            Navigation.findNavController(it).navigate(DetilFragmentDirections.actionDetilFragmentToListFragment())
+        }
     }
 
     class dogViewHoler(var view: View):RecyclerView.ViewHolder(view)
