@@ -39,6 +39,13 @@ class ListFragment : Fragment() {
         }
 
         observeViewModel()
+        refreshLayout.setOnRefreshListener {
+            dogRecyclerView.visibility = View.GONE
+            errorList.visibility = View.GONE
+            loadingView.visibility = View.VISIBLE
+            viewModel.refresh()
+            refreshLayout.isRefreshing = false
+        }
 
     }
 

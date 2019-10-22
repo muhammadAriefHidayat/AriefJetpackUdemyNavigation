@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_dog.view.*
 import org.dicoding.jetpackudemy.R
 import org.dicoding.jetpackudemy.model.DogBreed
+import org.dicoding.jetpackudemy.util.getProgressDrawable
+import org.dicoding.jetpackudemy.util.loadImage
 
 class DogsListAdapter(val dogList: ArrayList<DogBreed>):RecyclerView.Adapter<DogsListAdapter.dogViewHoler>() {
 
@@ -31,6 +33,7 @@ class DogsListAdapter(val dogList: ArrayList<DogBreed>):RecyclerView.Adapter<Dog
         holder.view.setOnClickListener {
             Navigation.findNavController(it).navigate(ListFragmentDirections.actionListFragmentToDetilFragment())
         }
+        holder.view.imageView.loadImage(dogList[position].imageUrl, getProgressDrawable(holder.view.imageView.context))
     }
 
     class dogViewHoler(var view: View):RecyclerView.ViewHolder(view)
