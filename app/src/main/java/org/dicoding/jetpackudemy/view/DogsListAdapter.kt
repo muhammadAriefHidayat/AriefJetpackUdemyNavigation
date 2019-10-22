@@ -29,7 +29,7 @@ class DogsListAdapter(val dogList: ArrayList<DogBreed>):RecyclerView.Adapter<Dog
         holder.view.name.text = dogList[position].dogBreed
         holder.view.lifeSpan.text = dogList[position].lifeSpan
         holder.view.setOnClickListener {
-            Navigation.findNavController(it).navigate(DetilFragmentDirections.actionDetilFragmentToListFragment())
+            Navigation.findNavController(it).navigate(ListFragmentDirections.actionListFragmentToDetilFragment())
         }
     }
 
